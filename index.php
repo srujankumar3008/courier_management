@@ -122,7 +122,7 @@
 
   <!-- Main Footer -->
   <footer class="main-footer">
-    <strong>©2022 All Rights Reserved. Designed by Srujan Kumar & Mahesh</strong>
+    <strong>©2022 All Rights Reserved. Designed by Srujan Kumar</strong>
     
     <div class="float-right d-none d-sm-inline-block">
       <b><?php echo $_SESSION['system']['name'] ?></b>
