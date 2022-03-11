@@ -17,7 +17,7 @@
 
 	include 'header.php' 
 ?>
-<body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed" style="background-color: #C6E9F9">
+<body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed" style="background-color: #C6E9F9;">
 <div class="wrapper">
   <?php include 'topbar.php' ?>
   <?php include 'sidebar.php' ?>

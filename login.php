@@ -4,14 +4,13 @@
 session_start();
 include('./db_connect.php');
   ob_start();
-   if(!isset($_SESSION['system'])){
-	
-    $system = $con->query("SELECT * FROM system_settings")->fetch_array();
-    foreach($system as $k => $v)
-    {
+  // if(!isset($_SESSION['system'])){
+
+    $system = $conn->query("SELECT * FROM system_settings")->fetch_array();
+    foreach($system as $k => $v){
       $_SESSION['system'][$k] = $v;
     }
-   }
+  // }
   ob_end_flush();
 ?>
 <?php 
@@ -19,6 +18,19 @@ if(isset($_SESSION['login_id']))
 header("location:index.php?page=home");
 
 ?>
+<style>
+  body{
+    background: #f2f2f2;
+    background-image:url("cmsbg.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    margin:auto;
+    width:100%;
+  
+  }
+</style>
 <?php include 'header.php' ?>
 <body class="hold-transition login-page">
 <div class="login-box">

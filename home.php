@@ -4,42 +4,43 @@ $twhere ="";
 if($_SESSION['login_type'] != 1)
   $twhere = "  ";
 ?>
+<body style="background-color:green;"> 
 <!-- Info boxes -->
 <?php if($_SESSION['login_type'] == 1): ?>
         <div class="row">
           <div class="col-12 col-sm-6 col-md-4">
-            <div class="small-box bg-light shadow-sm border">
+            <div class="small-box bg-light shadow-sm border" style="display:flex;align-items:center;justify-content:space-between;padding: right 10px;">
               <div class="inner">
                 <h3><?php echo $conn->query("SELECT * FROM branches")->num_rows; ?></h3>
 
                 <p>Total Branches</p>
               </div>
-              <div class="icon">
-                <i class="fa fa-building"></i>
+              <div class="icon" style="width: 65px;height: 50px;">
+                <img class="img rounded circle" style="width: 100%;height: 100%;padding-right:15%"; src="branch.png">
               </div>
             </div>
           </div>
            <div class="col-12 col-sm-6 col-md-4">
-            <div class="small-box bg-light shadow-sm border">
+            <div class="small-box bg-light shadow-sm border" style="display:flex;align-items:center;justify-content:space-between;padding: right 10px;margin: right 10px;">
               <div class="inner">
                 <h3><?php echo $conn->query("SELECT * FROM parcels")->num_rows; ?></h3>
 
                 <p>Total Parcels</p>
               </div>
-              <div class="icon">
-                <i class="fa fa-boxes"></i>
+              <div class="icon" style="width: 70px;height: 50px;">
+                <img class="img rounded circle" style="width: 100%;height: 100%;padding-right:15%"; src="parcel.png">
               </div>
             </div>
           </div>
            <div class="col-12 col-sm-6 col-md-4">
-            <div class="small-box bg-light shadow-sm border">
+            <div class="small-box bg-light shadow-sm border"style="display:flex;align-items:center;justify-content:space-between;padding: right 55px;padding: left 10em;padding: right 10em;">
               <div class="inner">
                 <h3><?php echo $conn->query("SELECT * FROM users where type != 1")->num_rows; ?></h3>
 
                 <p>Total Staff</p>
               </div>
-              <div class="icon">
-                <i class="fa fa-users"></i>
+              <div class="icon" style="width: 75px;height: 65px;">
+                <img class="img rounded circle" style="width: 100%;height: 100%;padding-right:15%"; src="team.png">
               </div>
             </div>
           </div>
@@ -49,14 +50,14 @@ if($_SESSION['login_type'] != 1)
                foreach($status_arr as $k =>$v):
           ?>
           <div class="col-12 col-sm-6 col-md-4">
-            <div class="small-box bg-light shadow-sm border">
+            <div class="small-box bg-light shadow-sm border"style="display:flex;align-items:center;justify-content:space-between;padding: right 10px;">
               <div class="inner">
                 <h3><?php echo $conn->query("SELECT * FROM parcels where status = {$k} ")->num_rows; ?></h3>
 
                 <p><?php echo $v ?></p>
               </div>
-              <div class="icon">
-                <i class="fa fa-boxes"></i>
+              <div class="icon" style="width: 70px;height: 70px;">
+                <img class="img rounded circle" style="width: 100%;height: 100%;padding-right:25%"; src="packages.png">
               </div>
             </div>
           </div>
@@ -71,5 +72,5 @@ if($_SESSION['login_type'] != 1)
           	</div>
           </div>
       </div>
-          
+      </body>          
 <?php endif; ?>
