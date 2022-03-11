@@ -1,6 +1,6 @@
 <!-- Navbar -->
-  <nav class="main-header navbar navbar-expand navbar-primary navbar-dark ">
-    <!-- Left navbar links -->
+  <nav class="main-header navbar navbar-expand navbar-success navbar-dark " style="background:linear-gradient(to top ,#777B7E, 10%, #877F7D 100%);">
+      <!-- Left navbar links -->
     <ul class="navbar-nav">
       <?php if(isset($_SESSION['login_id'])): ?>
       <li class="nav-item">
@@ -29,7 +29,7 @@
                 </div>
               </span>
             </a>
-            <div class="dropdown-menu" aria-labelledby="account_settings" style="left: -2.5em;">
+            <div class="dropdown-menu" aria-labelledby="account_settings" style="left: -2.5em;background-color:gray;">
               <a class="dropdown-item" href="javascript:void(0)" id="manage_account"><i class="fa fa-cog"></i> Manage Account</a>
               <a class="dropdown-item" href="ajax.php?action=logout"><i class="fa fa-power-off"></i> Logout</a>
             </div>

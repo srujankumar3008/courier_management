@@ -1,6 +1,6 @@
-  <aside class="main-sidebar sidebar-dark-primary elevation-4">
-    <div class="dropdown">
-   	<a href="./" class="brand-link">
+  <aside class="main-sidebar sidebar-dark-warning elevation-4" style="background-color: #f2f2f2">
+    <div class="dropdown" style="background-color: #900C3F">
+   	<a href="./" class="brand-link" style="background:linear-gradient(to top, #777B7E 10%,#877F7D 100%)">
         <?php if($_SESSION['login_type'] == 1): ?>
         <h3 class="text-center p-0 m-0"><b>ADMIN</b></h3>
         <?php else: ?>
@@ -10,7 +10,15 @@
     </a>
       
     </div>
-    <div class="sidebar pb-4 mb-4">
+    <style>
+      p{
+        color:black;
+      }
+      i{
+        color:black;
+      }
+    </style>
+    <div class="sidebar pb-4 mb-4" style="background: linear-gradient(to top, #777B7E, 10%, #877F7D 100%);color:black">
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column nav-flat" data-widget="treeview" role="menu" data-accordion="false">
           <li class="nav-item dropdown">
